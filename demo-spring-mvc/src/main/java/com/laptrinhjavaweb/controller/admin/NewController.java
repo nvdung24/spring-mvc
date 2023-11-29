@@ -1,19 +1,30 @@
 package com.laptrinhjavaweb.controller.admin;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.laptrinhjavaweb.model.NewModel;
+import com.laptrinhjavaweb.service.INewService;
+
 @Controller(value ="newControllerOfAdmin")
 public class NewController {
-	@RequestMapping(value = "/new/list", method = RequestMethod.GET)
-	public ModelAndView showList() {
+	
+	@Autowired
+	private INewService newService;
+	
+	@RequestMapping(value = "/home/new/list", method = RequestMethod.GET)
+	public ModelAndView showList(@ModelAttribute("model") NewModel model) {
 		ModelAndView mav = new ModelAndView("admin/new/list");
+		model.setListResult(newService.findAll());
+		mav.addObject("model", model);
 		return mav;
 	}
 	
-	@RequestMapping(value = "/new/eidt", method = RequestMethod.GET)
+	@RequestMapping(value = "/home/new/edit", method = RequestMethod.GET)
 	public ModelAndView editNew() {
 		ModelAndView mav = new ModelAndView("admin/new/edit");
 		return mav;

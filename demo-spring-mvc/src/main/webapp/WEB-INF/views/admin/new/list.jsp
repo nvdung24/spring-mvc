@@ -23,6 +23,7 @@
 						</ul>
 						<!-- /.breadcrumb -->
 					</div>
+					
 					<div class="page-content">
 						<div class="row">
 							<div class="col-xs-12">
@@ -32,7 +33,7 @@
 											<div class="dt-buttons btn-overlap btn-group">
 												<a flag="info"
 												   class="dt-button buttons-colvis btn btn-white btn-primary btn-bold" data-toggle="tooltip"
-												   title='Thêm bài viết' href='#'>
+												   title='Thêm bài viết' href='/home/new/edit'>
 															<span>
 																<i class="fa fa-plus-circle bigger-110 purple"></i>
 															</span>
@@ -47,35 +48,40 @@
 										</div>
 									</div>
 								</div>
-								<div class="row">
-									<div class="col-xs-12">
-										<div class="table-responsive">
-											<table class="table table-bordered">
-												<thead>
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="table-responsive">
+										<table class="table table-bordered">
+											<thead>
+												<tr>
+													<th>Tên bài viết</th>
+													<th>Mô tả ngắn</th>
+													<th>Thao tác</th>
+												</tr>
+											</thead>
+											<tbody>
+												<c:forEach var="item" items="${model.listResult}">
 													<tr>
-														<th>Tên bài viết</th>
-														<th>Mô tả ngắn</th>
-														<th>Thao tác</th>
+														<td>${item.title}</td>
+														<td>${item.shortDescription}</td>
+														<td><a class="btn btn-sm btn-primary btn-edit"
+															data-toggle="tooltip" title="Cập nhật bài viết" href='#'><i
+																class="fa fa-pencil-square-o" aria-hidden="true"></i> </a></td>
 													</tr>
-												</thead>
-												<tbody>
-													<c:forEach var="item" items="${model.listResult}">
-														<tr>
-															<td>${item.title}</td>
-															<td>${item.shortDescription}</td>
-															<td>																
-																<a class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip"
-																   title="Cập nhật bài viết" href='#'><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-																</a>
-															</td>
-														</tr>
-													</c:forEach>
-												</tbody>
-											</table>											
-										</div>
+												</c:forEach>
+											</tbody>
+											<!-- <ul class="pagination" id="pagination"></ul> -->
+											<input type="hidden" value="" id="page" name="page" />
+											<input type="hidden" value="" id="maxPageItem"
+												name="maxPageItem" />
+											<input type="hidden" value="" id="sortName" name="sortName" />
+											<input type="hidden" value="" id="sortBy" name="sortBy" />
+											<input type="hidden" value="" id="type" name="type" />
+										</table>
 									</div>
 								</div>
 							</div>
+						</div>
 						</div>
 					</div>
 				</div>

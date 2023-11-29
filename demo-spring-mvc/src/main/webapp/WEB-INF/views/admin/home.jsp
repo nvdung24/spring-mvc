@@ -1,77 +1,29 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-
-<!DOCTYPE html>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-
 <head>
-
-<meta charset="UTF-8">
-
-<title>Home Page</title>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- <title>Trang chủ</title> -->
 </head>
-
 <body>
+<div class="main-content">
+    <div class="main-content-inner">
+        <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="#">Trang chủ</a>
+                </li>
+            </ul><!-- /.breadcrumb -->
+        </div>
+        <div class="page-content">
+            <div class="row" >
+                <div class="col-xs-12">
 
-	<div id="wrapper">
-
-		<!-- Sidebar -->
-		<ul class="sidebar navbar-nav">
-			<li class="nav-item"><a class="nav-link" href="users.html">
-					<i class="fas fa-fw fa-chart-area"></i> <span>User</span>
-			</a></li>
-			<li class="nav-item"><a class="nav-link" href="roles.html">
-					<i class="fas fa-fw fa-chart-area"></i> <span>Role</span>
-			</a></li>
-			<li class="nav-item"><a class="nav-link" href="categories.html">
-					<i class="fas fa-fw fa-table"></i> <span>Category</span>
-			</a></li>
-		</ul>
-			<!-- Sticky Footer -->
-			<footer class="sticky-footer">
-				<div class="container my-auto">
-					<div class="copyright text-center my-auto">
-						<span>NguyenVanDung</span>
-					</div>
-				</div>
-			</footer>
-
-		</div>
-		<!-- /.content-wrapper -->
-
-	</div>
-	<!-- /#wrapper -->
-
-	<!-- Scroll to Top Button-->
-	<a class="scroll-to-top rounded" href="#page-top"> <i
-		class="fas fa-angle-up"></i>
-	</a>
-
-	<!-- Logout Modal-->
-	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
-		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-					<button class="close" type="button" data-dismiss="modal"
-						aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-				</div>
-				<div class="modal-body">Select "Logout" below if you are ready
-					to end your current session.</div>
-				<div class="modal-footer">
-					<button class="btn btn-secondary" type="button"
-						data-dismiss="modal">Cancel</button>
-					<a class="btn btn-primary" href="login.html">Logout</a>
-				</div>
-			</div>
-		</div>
-	</div>
-
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- /.main-content -->
 </body>
-
 </html>
