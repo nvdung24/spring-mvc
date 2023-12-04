@@ -46,7 +46,6 @@
 														<td>${item.password }</td>
 														<td>${item.status }</td>
 														<td>${item.role }</td>
-														<td><img src="" width="100px" height="100px" /></td>
 														<td><a href="#" class="btn btn-warning">Edit</a> <a
 															href="#" class="btn btn-danger"
 															onclick="return confirm('Are you sure to delete this record?')">Delete</a></td>

@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.laptrinhjavaweb.dao.IUserDAO;
+import com.laptrinhjavaweb.mapper.NewMapper;
 import com.laptrinhjavaweb.mapper.UserMapper;
 import com.laptrinhjavaweb.model.UserModel;
 @Repository
@@ -17,6 +18,14 @@ public class UserDAO extends AbstractDAO<UserModel> implements IUserDAO  {
 		sql.append(" WHERE username = ? AND password = ? AND status = ?");
 		List<UserModel> users = query(sql.toString(), new UserMapper(), userName, password, status);
 		return users.isEmpty() ? null : users.get(0);
+	}
+
+	@Override
+	public List<UserModel> findAll() {
+		// TODO Auto-generated method stub
+		StringBuilder sql = new StringBuilder("SELECT * FROM user");
+		
+		return query(sql.toString(), new UserMapper());
 	}
 	
 }

@@ -1,5 +1,7 @@
 package com.laptrinhjavaweb.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +23,12 @@ public class UserService implements IUserService {
 	@Override
 	public UserModel findByUserNameAndPasswordAndStatus(String userName, String password, Integer status) {
 		return userDAO.findByUserNameAndPasswordAndStatus(userName, password, status);
+	}
+
+	@Override
+	public List<UserModel> findAll() {
+		// TODO Auto-generated method stub
+		return userDAO.findAll();
 	}
 	
 }
